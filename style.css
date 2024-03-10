@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d3d3d3; /* Gray background */
+}
+
+/* Add this new rule to style your labels */
+label {
+    font-size: 18px; /* This sets the font size of labels to 18 pixels. Adjust as needed. */
+    font-weight: bold; /* Optional: makes the text bold */
+    display: block; /* Makes the label take up the full width like a block element */
+    margin-bottom: 5px; /* Adds some space between the label and the text field */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Use full viewport height */
+}
+
+.text-fields {
+    flex: 3; /* Allocate more space to the text fields */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.image-viewer {
+    flex: 6; /* Less space for the image viewer */
+    overflow-y: auto; /* Enable vertical scrolling for the image viewer as well */
+    background-color: #464646; /* Slightly different gray for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-viewer img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image is fully visible */
+    transition: transform 0.25s ease;
+}
+
+input[type="text"] {
+    width: 100%; /* Make text fields take the full width of their container */
+    padding: 12px; /* Increase padding for larger fields */
+    margin-bottom: 15px; /* Increase spacing between fields */
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 28px; /* Increase font size for better readability */
+}
